@@ -1,0 +1,14 @@
+#Docker file for node (npm install), however also installs python install for bcrypt
+
+FROM iron/node:dev
+
+#install python
+RUN apk add --update \
+    python \
+    python-dev \
+    py-pip
+
+WORKDIR /srv/app
+ADD . /srv/app
+
+ENTRYPOINT ["npm", "install"]
