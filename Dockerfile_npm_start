@@ -1,6 +1,6 @@
 #Docker file for node (npm start)
 
-FROM amlwwalker/node-python-dev:latest
+FROM amlwwalker/docker-node-python-dev:latest
 
 WORKDIR /srv/app
 ADD . /srv/app
