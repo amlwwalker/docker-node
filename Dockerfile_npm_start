@@ -1,9 +1,11 @@
-#Docker file for node (npm start)
+#Docker file for node
+#run this so that file changes get built on server
 
 FROM amlwwalker/docker-node-python-dev:latest
 
+RUN npm install -g nodemon
 WORKDIR /srv/app
 ADD . /srv/app
 
 EXPOSE 3000
-ENTRYPOINT ["npm", "start"]
+ENTRYPOINT ["nodemon", "app.js"]

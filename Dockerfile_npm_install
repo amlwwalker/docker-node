@@ -1,4 +1,5 @@
-#Docker file for node (npm install), however also installs python install for bcrypt
+#Docker file for node, however also installs python install for bcrypt
+#this should handle npm install
 
 FROM iron/node:dev
 
