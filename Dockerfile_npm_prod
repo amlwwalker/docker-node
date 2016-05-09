@@ -7,4 +7,4 @@ WORKDIR /srv/app
 ADD . /srv/app
 
 EXPOSE 3000
-ENTRYPOINT ["node", "app.js"]
+ENTRYPOINT ["node", "./bin/www"]
