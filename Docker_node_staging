@@ -1,0 +1,10 @@
+#Docker file for node in production
+#run this on server for smallest image
+
+FROM iron/node:latest
+
+WORKDIR /srv/app
+ADD . /srv/app
+
+EXPOSE 3000
+ENTRYPOINT ["node", "./bin/www"]
