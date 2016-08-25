@@ -2,7 +2,8 @@
 #run this on server for smallest image
 
 FROM iron/node:latest
-
+RUN apk add --update \
+	git
 WORKDIR /srv/app
 ADD . /srv/app
 
